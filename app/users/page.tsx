@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Suspense } from "react";
 import UserTable from "./UserTable";
 
 interface Props {
@@ -15,7 +15,10 @@ const UsersPage = async ({
 }: Props) => {
 
   return (
-    <UserTable sortOrder={sortOrder}/>
+    <div>
+      <h1>Users</h1>
+      <UserTable sortOrder={sortOrder} />
+    </div>
   );
 };
 
